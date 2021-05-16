@@ -13,7 +13,7 @@ type CommandHandler struct {
 }
 
 func (client *ImapClient) SendLoginCommand() {
-	command := `00000001 LOGIN "d.devops@yandex.kz" "ykffauwrbclpahoa"` + "\r\n"
+	command := `00000001 LOGIN "" ""` + "\r\n"
 	fmt.Fprintf(client.connection, command)
 
 	reader := bufio.NewReader(client.connection)
